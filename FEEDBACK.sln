@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FEEDBACK", "FEEDBACK\FEEDBACK.csproj", "{D496C887-0FFC-4BBD-A5C4-D4CBA634674D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D496C887-0FFC-4BBD-A5C4-D4CBA634674D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D496C887-0FFC-4BBD-A5C4-D4CBA634674D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D496C887-0FFC-4BBD-A5C4-D4CBA634674D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D496C887-0FFC-4BBD-A5C4-D4CBA634674D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD7AA43F-C78A-46D4-A385-A164E9AA1E85}
+	EndGlobalSection
+EndGlobal
