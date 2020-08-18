@@ -19,6 +19,22 @@ namespace FEEDBACK.Areas.admin
                 "admin/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
+
+
+
+            context.MapRoute(
+                "Edit",
+                "admin/{controller}/{action}/{id}",
+                new { controller = "LOAIKHACHSANs", action = "Index", id = UrlParameter.Optional }
+            );
+
+            context.MapRoute(
+                "Search_KS",
+                "admin/{controller}/{action}/{id}",
+                new { controller = "Search_KS", action = "Search", id = UrlParameter.Optional }
+            );
+
+
         }
     }
 }

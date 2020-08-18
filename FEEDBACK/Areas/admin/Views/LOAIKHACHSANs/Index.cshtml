@@ -1,0 +1,74 @@
+﻿@model IEnumerable<FEEDBACK.Models.LOAIKHACHSAN>
+
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .checked {
+            color: orange;
+        }
+
+        .loai-ks {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="font-weight:bold; text-align:center">Quản lý Danh mục Khách sạn</h2>
+
+
+    @Html.ActionLink(">> Trang chủ Admin", "Index", "Admin")
+    
+    <br />
+    <br />
+    <br />
+
+   <h5 style="font-style:italic; font-weight:bold; color:blue">Tìm kiếm các khách sạn theo mã loại</h5> 
+    @using (Html.BeginForm("Search", "Search_KS", FormMethod.Get, new { enctype = "multipart/form-data" }))
+    {
+
+        <input name="searching" type="text" />
+        <button type="submit">Search</button>
+    }
+
+    <br />
+    <br />
+    <h4>Chi tiết các loại khách sạn </h4>
+    <br />
+
+
+    <table class="table">
+        <tr>
+            <th>
+                Tên loại
+            </th>
+            <th>Mã loại</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GHICHU)
+                </td>
+                <td>@Html.DisplayFor(modelItem =>item.MALOAI_KS)</td>
+                <td >
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MALOAI_KS }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MALOAI_KS }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MALOAI_KS })
+                </td>
+            </tr>
+        }
+
+
+    </table>
+    <button>
+        @Html.ActionLink("Thêm loại khách sạn mới", "Create")
+    </button>

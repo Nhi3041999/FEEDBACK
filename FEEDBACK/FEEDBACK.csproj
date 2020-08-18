@@ -131,6 +131,8 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\admin\Controllers\AuthorController.cs" />
+    <Compile Include="Areas\admin\Controllers\LOAIKHACHSANsController.cs" />
+    <Compile Include="Areas\admin\Controllers\Search_KSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -162,6 +164,14 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\admin\Views\web.config" />
     <Content Include="Areas\admin\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\admin\Views\LOAIKHACHSANs\Create.cshtml" />
+    <Content Include="Areas\admin\Views\LOAIKHACHSANs\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\LOAIKHACHSANs\Details.cshtml" />
+    <Content Include="Areas\admin\Views\LOAIKHACHSANs\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\LOAIKHACHSANs\Index.cshtml" />
+    <Content Include="Areas\admin\Views\Search_KS\Search.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -190,7 +200,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Data\" />
-    <Folder Include="Areas\admin\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

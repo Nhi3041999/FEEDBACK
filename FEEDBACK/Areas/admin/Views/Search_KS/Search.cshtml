@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FEEDBACK.Models.DM_KHACHSAN>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Các khách sạn cần tìm</h2>
+<br />
+<br />
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MALOAI_KS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TENCOSO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GHICHU)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MALOAI_KS)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TENCOSO)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DIACHI)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SDT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EMAIL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.GHICHU)
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MAKS }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MAKS }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MAKS })
+    </td>
+</tr>
+}
+
+</table>
