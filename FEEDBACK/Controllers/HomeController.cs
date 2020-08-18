@@ -33,7 +33,7 @@ namespace FEEDBACK.Controllers
         {
             return View(db.DM_KHACHSAN.ToList());
         }
-        /**********************************************************************/
+        /********************************************************************/
         public ActionResult Create_KS()
         {
             return View();
