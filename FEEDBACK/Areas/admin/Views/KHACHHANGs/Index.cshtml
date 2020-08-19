@@ -1,0 +1,63 @@
+﻿@model IEnumerable<FEEDBACK.Models.KHACHHANG>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Thông tin khách hàng</h2>
+<br />
+
+@Html.ActionLink(">> Trở về trang chủ Admin","Index","Admin")
+<br /><br />
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<br />
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+          Tên khách hàng
+        </th>
+        <th>
+            Điện thoại
+        </th>
+        <th>
+           Địa chỉ
+        </th>
+        <th>
+           Giới tính
+        </th>
+        <th>
+            Ngày sinh
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOITINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYSINH)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MAKH }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MAKH }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MAKH })
+        </td>
+    </tr>
+}
+
+</table>

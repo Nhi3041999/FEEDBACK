@@ -1,0 +1,59 @@
+﻿@model FEEDBACK.Models.KHACHHANG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Chi tiết khách hàng</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên khách hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENKH)
+        </dd>
+
+        <dt>
+            Số điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+           Địa chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHI)
+        </dd>
+
+        <dt>
+           Giới tính
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIOITINH)
+        </dd>
+
+        <dt>
+           Ngày sinh
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYSINH)
+        </dd>
+
+    </dl>
+</div>
+
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.MAKH }) 
+<br /><br />
+    @Html.ActionLink(">>Trở lại danh sách thông tin", "Index")
+
