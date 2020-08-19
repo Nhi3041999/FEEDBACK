@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết khách sạn</h2>
 
 <div>
-    <h4>DM_KHACHSAN</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.LOAIKHACHSAN.GHICHU)
+            <h4>Loại khách sạn</h4>
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TENCOSO)
+            <h4>Tên cơ sở</h4>
         </dt>
 
         <dd>
@@ -27,64 +27,65 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SOPHONG)
+           <h4>Số phòng</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SOPHONG)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.SOGIUONG)
+            <h4>Số giường</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SOGIUONG)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.DIACHI)
+            <h4>Địa chỉ</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.DIACHI)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.SDT)
+            <h4>Điện thoại</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SDT)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.EMAIL)
+            <h4>Email</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EMAIL)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.GHICHU)
+            <h4>Ghi chú</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.GHICHU)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.TRANGTHAI)
+            <h4>Trạng thái</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.TRANGTHAI)
         </dd>
-
+        <br />
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MAKS }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.MAKS }) 
+    <br /><br />
+    @Html.ActionLink(">>Trở lại danh sách khách sạn", "Index")
 </p>

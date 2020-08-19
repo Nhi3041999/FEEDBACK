@@ -4,15 +4,15 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Xóa khách sạn</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h4 style="color:red; font-style:italic">Bạn có chắc muốn xóa khách sạn này chứ?</h4>
 <div>
-    <h4>DM_KHACHSAN</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.LOAIKHACHSAN.GHICHU)
+            <h4>Loại khách sạn</h4>
         </dt>
 
         <dd>
@@ -20,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TENCOSO)
+            <h4>Tên cơ sở</h4>
         </dt>
 
         <dd>
@@ -28,69 +28,69 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SOPHONG)
+            <h4>Số phòng</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SOPHONG)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.SOGIUONG)
+            <h4>Số giường</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SOGIUONG)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.DIACHI)
+            <h4>Địa chỉ</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.DIACHI)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.SDT)
+            <h4>Điện thoại</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SDT)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.EMAIL)
+            <h4>Email</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EMAIL)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.GHICHU)
+            <h4>Ghi chú</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.GHICHU)
         </dd>
-
+        <br />
         <dt>
-            @Html.DisplayNameFor(model => model.TRANGTHAI)
+            <h4>Trạng thái</h4>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.TRANGTHAI)
         </dd>
-
+        <br />
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink(">> Trở lại danh sách khách sạn", "Index")
         </div>
     }
 </div>
