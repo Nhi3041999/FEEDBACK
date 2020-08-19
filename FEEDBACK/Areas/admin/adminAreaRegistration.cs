@@ -27,6 +27,11 @@ namespace FEEDBACK.Areas.admin
                 "admin/{controller}/{action}/{id}",
                 new { controller = "LOAIKHACHSANs", action = "Index", id = UrlParameter.Optional }
             );
+            context.MapRoute(
+                "dm_khachsan",
+                "admin/{controller}/{action}/{id}",
+                new { controller = "DM_KHACHSAN", action = "Index", id = UrlParameter.Optional }
+            );
 
             context.MapRoute(
                 "Search_KS",

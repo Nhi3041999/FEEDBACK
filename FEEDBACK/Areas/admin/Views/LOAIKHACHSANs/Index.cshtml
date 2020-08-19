@@ -20,27 +20,29 @@
 </head>
 <body>
 
-    <h2 style="font-weight:bold; text-align:center">Quản lý Danh mục Khách sạn</h2>
+    <h2 style="font-weight:bold; text-align:center">Quản lý khách sạn theo loại</h2>
 
-
+    <br />
     @Html.ActionLink(">> Trang chủ Admin", "Index", "Admin")
-    
+
     <br />
     <br />
     <br />
 
-   <h5 style="font-style:italic; font-weight:bold; color:blue">Tìm kiếm các khách sạn theo mã loại</h5> 
+    <h5 style="font-style:italic; font-weight:bold; color:blue">Tìm kiếm các khách sạn theo mã loại</h5>
     @using (Html.BeginForm("Search", "Search_KS", FormMethod.Get, new { enctype = "multipart/form-data" }))
     {
 
-        <input name="searching" type="text" />
+        @Html.TextBox("searching")
         <button type="submit">Search</button>
     }
 
     <br />
     <br />
-    <h4>Chi tiết các loại khách sạn </h4>
+    <h4>Chi tiết các loại khách sạn </h4>@Html.ActionLink(" >>Bấm xem chi tiết tất cả khách sạn","Index","DM_KHACHSAN")
     <br />
+    <br />
+
 
 
     <table class="table">
@@ -58,8 +60,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.GHICHU)
                 </td>
-                <td>@Html.DisplayFor(modelItem =>item.MALOAI_KS)</td>
-                <td >
+                <td>@Html.DisplayFor(modelItem => item.MALOAI_KS)</td>
+                <td>
                     @Html.ActionLink("Sửa", "Edit", new { id = item.MALOAI_KS }) |
                     @Html.ActionLink("Chi tiết", "Details", new { id = item.MALOAI_KS }) |
                     @Html.ActionLink("Xóa", "Delete", new { id = item.MALOAI_KS })

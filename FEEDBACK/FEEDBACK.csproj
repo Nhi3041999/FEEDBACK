@@ -131,6 +131,7 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\admin\Controllers\AuthorController.cs" />
+    <Compile Include="Areas\admin\Controllers\DM_KHACHSANController.cs" />
     <Compile Include="Areas\admin\Controllers\LOAIKHACHSANsController.cs" />
     <Compile Include="Areas\admin\Controllers\Search_KSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -172,6 +173,11 @@
     <Content Include="Areas\admin\Views\LOAIKHACHSANs\Edit.cshtml" />
     <Content Include="Areas\admin\Views\LOAIKHACHSANs\Index.cshtml" />
     <Content Include="Areas\admin\Views\Search_KS\Search.cshtml" />
+    <Content Include="Areas\admin\Views\DM_KHACHSAN\Create.cshtml" />
+    <Content Include="Areas\admin\Views\DM_KHACHSAN\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\DM_KHACHSAN\Details.cshtml" />
+    <Content Include="Areas\admin\Views\DM_KHACHSAN\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\DM_KHACHSAN\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

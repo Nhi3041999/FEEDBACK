@@ -3,63 +3,73 @@
 @{
     ViewBag.Title = "Search";
 }
+<html>
+<head>
+    <style>
 
-<h2>Các khách sạn cần tìm</h2>
+    </style>
+</head>
+<body>
+
+<br />
+    @Html.ActionLink(" >>Quản lý khách sạn theo loại","Index","LOAIKHACHSANs")
+<br />
+    <br />
+<h4 style="font-weight:bold">Các khách sạn loại <p style="color:red; font-style:italic">@ViewBag.Search</p> </h4>
 <br />
 <br />
 
 
 <table class="table">
-    <tr>
+    <tr style="color:darkblue">
+      
         <th>
-            @Html.DisplayNameFor(model => model.MALOAI_KS)
+            Tên cơ sở
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TENCOSO)
+            Địa chỉ
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DIACHI)
+            Điện thoại
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SDT)
+            Email
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EMAIL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GHICHU)
+            Dịch vụ
         </th>
 
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.MALOAI_KS)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.TENCOSO)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.DIACHI)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SDT)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.EMAIL)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.GHICHU)
-    </td>
+    @foreach (var item in Model)
+    {
+        <tr >
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.TENCOSO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DIACHI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GHICHU)
+            </td>
 
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.MAKS }) |
-        @Html.ActionLink("Details", "Details", new { id = item.MAKS }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.MAKS })
-    </td>
-</tr>
-}
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MAKS }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MAKS }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.MAKS })
+            </td>
+        </tr>
+    }
 
 </table>
+</body>
+</html>
