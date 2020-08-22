@@ -28,7 +28,9 @@
         </th>
         <th>
             Địa chỉ
-        </th>
+        </th><th></th>
+        <th>Số phòng</th>
+        <th>Số giường</th><th></th><th></th>
         <th>
             Điện thoại
         </th>
@@ -44,30 +46,29 @@
 
     @foreach (var item in Model)
     {
-        <tr >
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.TENCOSO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DIACHI)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SDT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EMAIL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GHICHU)
-            </td>
+<tr>
 
-            <td>
-                @Html.ActionLink("Sửa", "Edit", new { id = item.MAKS }) |
-                @Html.ActionLink("Chi tiết", "Details", new { id = item.MAKS }) |
-                @Html.ActionLink("Xóa", "Delete", new { id = item.MAKS })
-            </td>
-        </tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TENCOSO)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DIACHI)
+    </td><td></td>
+    <td>@Html.DisplayFor(modelItem => item.SOPHONG)</td>
+    <td>@Html.DisplayFor(modelItem => item.SOGIUONG)</td><td></td><td></td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SDT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EMAIL)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.GHICHU)
+    </td>
+
+    <td>
+    </td>
+</tr>
     }
 
 </table>

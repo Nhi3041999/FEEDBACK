@@ -76,8 +76,8 @@
             @Html.DisplayFor(modelItem => item.LOAIKHACHSAN.GHICHU)
         </td>
         <td>
-            @Html.ActionLink("Sửa", "Edit", new { id=item.MAKS }) |
-            @Html.ActionLink("Chi tiết", "Details", new { id=item.MAKS }) |
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MAKS }) ||
+            <!--@Html.ActionLink("Chi tiết", "Details", new { id=item.MAKS }) |-->
             @Html.ActionLink("Xóa", "Delete", new { id=item.MAKS })
         </td>
     </tr>

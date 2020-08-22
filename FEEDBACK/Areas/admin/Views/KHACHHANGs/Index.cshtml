@@ -9,14 +9,14 @@
 
 @Html.ActionLink(">> Trở về trang chủ Admin","Index","Admin")
 <br /><br />
-<p>
+<button>
     @Html.ActionLink("Thêm mới", "Create")
-</p>
+</button>
 <br />
 <br />
 
 <table class="table">
-    <tr>
+    <tr style="color:darkblue;">
         <th>
           Tên khách hàng
         </th>
@@ -53,8 +53,8 @@
             @Html.DisplayFor(modelItem => item.NGAYSINH)
         </td>
         <td>
-            @Html.ActionLink("Sửa", "Edit", new { id=item.MAKH }) |
-            @Html.ActionLink("Chi tiết", "Details", new { id=item.MAKH }) |
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MAKH }) ||
+            
             @Html.ActionLink("Xóa", "Delete", new { id=item.MAKH })
         </td>
     </tr>
